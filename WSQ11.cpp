@@ -147,7 +147,7 @@ cfinal=find_bananas(filename.c_str()); //THIS ASSIGNATION HELPS TO CALL THE FUNC
   //IN ORDER to convert string to char as a parameter #Mastery06 and #Mastery07
 
 cout<<"TIMES THE WORD banana FOUND="<<cfinal<<endl; //In
-//this text we show the authentic output of the value entered of Lychrelcounter in the terminal interface #Mastery20 Validated user
+//this text we show the authentic output of the value entered of cfinal in the terminal interface #Mastery20 Validated user
 //input (ensure correct / expected data entry)
 
 return 0; // This command allows label the final of the function main ()
