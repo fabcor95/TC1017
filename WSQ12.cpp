@@ -6,6 +6,8 @@
 //fuctions of inputs and outputs of manipulate data in languague
 //C++ #MasteryTopic01
 
+#include <cmath>
+
 using namespace std; //In C++ we need a command
 // that everytime goes with the instructions of input and outputs
 //of data that is call std but with this command helps writing
@@ -42,26 +44,32 @@ float calculuate_e (float precision) //This is the structure of a function where
 {
 
 float e = 1; //Declarate float variable e initialized in 1
+float previuse;
+int i=1;
 
-for (int i=1; i<=precision; i++) //With this command for is utilized as a loop FOR execute all the
+do //With this command for is utilized as a loop FOR execute all the
 //instruccions that has this loop until that does not complete that the variable i
 // will be less or equal than the numerical value of precision variable while it is increasing one in one in this variable i
 //inicialized from the value 1
 {
+   previuse=e;
    e = e + 1/(factorial(i)); //This is a math operation between 'e' and
    // the value of the float function factorial with the int parameter i and stands for
     //do the sum of e and the inverse operation of the factorial function with the i parameter and saved it in the float
     //variable 'e', this is the operation of the infinite series thanks to the recursion #Mastery16 Use of recursion for repetitive
     //algorithms
+    cout<<e<<endl;
+   i++;
+ } while(abs (e-previuse)>precision);
 
-   }
-
+ return e; //With this command you return the value of the previus operations of "calculuate_e" function inside of the
+ //variable float e in order to call it in THE MAIN FUNCTION
+ 
 cout<< fixed <<setprecision(precision)<<endl; //float notation for manipulator of significant figures or decimal points after
 //the decimal point. Hence, for example of precision=5 then the value will be setprecision(5) and with fixed after the decimal point
 //this shows for the number of decimal places that the user wants. In consequence the value of variable e wil suffer after this operation
+cout<<e<<endl;
 
-return e; //With this command you return the value of the previus operations of "calculuate_e" function inside of the
-//variable float e in order to call it in THE MAIN FUNCTION
 
 }
 
